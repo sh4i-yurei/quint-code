@@ -116,6 +116,11 @@ func (s *Server) handleInitialize(req JSONRPCRequest) {
 			"name":    "quint-code",
 			"version": "4.0.0",
 		},
+		"instructions": "First Principles Framework (FPF) for structured decision tracking. " +
+			"Workflow: quint_init > quint_record_context > quint_propose (hypothesize) > " +
+			"quint_verify (logical checks) > quint_test (empirical validation) > " +
+			"quint_audit (bias/trust) > quint_decide (finalize DRR). " +
+			"Use quint_status to check phase. State lives in .quint/ per project.",
 	})
 }
 
