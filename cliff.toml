@@ -37,4 +37,4 @@ commit_parsers = [
     { message = "^style", group = "Styling" },
     { message = "^perf", group = "Performance" },
 ]
-tag_pattern = "[0-9].*"
+tag_pattern = "v?[0-9].*"

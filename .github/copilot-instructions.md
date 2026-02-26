@@ -9,7 +9,7 @@ JSON-RPC 2.0 over stdio.
 
 ## Repository structure
 
-```
+```text
 src/mcp/
 ├── cmd/          # CLI entry point and command definitions
 ├── db/           # SQLite database and migrations

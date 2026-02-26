@@ -14,7 +14,7 @@ Source: `src/mcp/`. Binary installs to `~/.local/bin/quint-code`.
 ## Development commands
 
 | Command | What it does |
-|---------|-------------|
+| ------- | ----------- |
 | `task build` | Build binary (`src/mcp/` → `~/.local/bin/quint-code`) |
 | `task test` | Run all tests (`go test -v ./...`) |
 | `task lint` | Run linter (`go vet ./...`) |
@@ -25,7 +25,7 @@ Source: `src/mcp/`. Binary installs to `~/.local/bin/quint-code`.
 See `docs/architecture.md` for system design. Key constraint:
 FPF state machine phases have preconditions — skipping phases is blocked.
 
-Diagram freshness: !stat -c '%Y' docs/diagrams/deps-internal.svg 2>/dev/null || echo "no diagrams"
+Run `scripts/doc-freshness.sh` after Go source changes to check diagram staleness.
 
 ## FPF reference
 
@@ -43,6 +43,7 @@ are our ADR equivalent.
 ## MCP debugging
 
 Inspect the server interactively:
+
 ```bash
 npx @modelcontextprotocol/inspector ~/.local/bin/quint-code serve
 ```
@@ -50,5 +51,6 @@ npx @modelcontextprotocol/inspector ~/.local/bin/quint-code serve
 ## Project-specific reminders
 
 - Check `.quint/knowledge/` for verified project claims before making assumptions
-- Transformer Mandate: generate options with evidence, human decides — never make architectural choices autonomously
+- Transformer Mandate: generate options with evidence, human
+  decides — never make architectural choices autonomously
 - `.quint/context.md` has project constraints and tech stack
