@@ -1,0 +1,15 @@
+# Gate G — AI commit attribution check (STD-030).
+# Calls the reusable gate-g-attribution workflow from policies-and-standards.
+# CodeRabbit auto-review is handled by the GitHub App, not this workflow.
+
+name: Gate G
+
+on:
+  pull_request:
+    branches: [main, dev]
+
+jobs:
+  attribution:
+    uses: sh4i-yurei/policies-and-standards/.github/workflows/gate-g-attribution.yml@main
+    with:
+      blocking: false
